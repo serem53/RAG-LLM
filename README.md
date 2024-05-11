@@ -1,0 +1,1 @@
+##deploying RAG application using AWS(aws lambda,aws ECR),langchain,Huggingface,vectoe databases,chroma db or lens docker
