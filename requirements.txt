@@ -11,3 +11,6 @@ streamlit
 pypdf
 faiss-cpu
 ##faiss-gpu
+
+-e .  
+##to install local package
