@@ -31,7 +31,7 @@ PROMPT=PromptTemplate(
 
 
 def get_llama2_llm():
-    llm=Bedrock(model_id="meta.llama2-13b-chat-v1",client=bedrock)
+    llm=Bedrock(model_id="amazon.titan-text-lite-v1",client=bedrock)
     
     return llm
 
@@ -52,8 +52,8 @@ def get_response_llm(llm,vectorstore_faiss,query):
     return answer["result"]
     
 if __name__=='__main__':
-    docs=data_ingestion()
-    vectorstore_faiss=get_vector_store(docs)
+    #docs=data_ingestion()
+    #vectorstore_faiss=get_vector_store(docs)
     faiss_index=FAISS.load_local("faiss_index",bedrock_embeddings,allow_dangerous_deserialization=True)
     query="What is RAG token?"
     llm=get_llama2_llm()

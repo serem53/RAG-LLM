@@ -34,7 +34,7 @@ def main():
                 get_vector_store(docs)
                 st.success("done")
                 
-        if st.button("llama model"):
+        if st.button("titan model"):
             with st.spinner("processing..."):
                 faiss_index=FAISS.load_local("faiss_index",bedrock_embeddings,allow_dangerous_deserialization=True)
                 llm=get_llama2_llm()
